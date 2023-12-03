@@ -1,12 +1,11 @@
-import express, { Request, Response } from 'express';
+import { createExpressServer } from 'routing-controllers';
+import { BankController } from './controllers/BankController';
 
-const app = express();
+const app = createExpressServer({
+    controllers: [BankController]
+})
+
 const port = 3003;
-
-app.get('/', (req: Request, res: Response) => {
-  res.send('Hello, TypeScript and Express!');
-});
-
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
