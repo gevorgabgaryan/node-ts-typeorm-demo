@@ -1,11 +1,12 @@
-import { createExpressServer } from 'routing-controllers';
-import { BankController } from './controllers/BankController';
+import App from './app';
+import TypeORM from './typeorm';
 
-const app = createExpressServer({
-    controllers: [BankController]
-})
-
-const port = 3003;
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+(async () => {
+  try {
+    await TypeORM.init();
+    await App.init();
+  } catch (err) {
+    console.error('Initializing error', err)
+    process.exit(1)
+  }
+})();
