@@ -1,12 +1,14 @@
+import 'reflect-metadata';
 import App from './app';
 import TypeORM from './typeorm';
+import logger from './shared/logger';
 
 (async () => {
   try {
     await TypeORM.init();
     await App.init();
   } catch (err) {
-    console.error('Initializing error', err)
+    logger.error('Initializing error', err)
     process.exit(1)
   }
 })();

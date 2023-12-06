@@ -1,15 +1,26 @@
 import { appDataSource } from "./app-data-source"
+import logger from "../shared/logger"
 
 class TypeORM  {
  static async   init() {
         try {
            await appDataSource.initialize()
-           console.log("Data Source has been initialized!")
+           logger.info("Data Source has been initialized!")
         } catch(err) {
-            console.error("Error during Data Source initialization:", err)
+            logger.error("Error during Data Source initialization:", err)
             throw err
         }
     }
+
+    static async close() {
+        try {
+          await appDataSource.close();
+          logger.info("Data Source has been closed!");
+        } catch (err) {
+          logger.error("Error during Data Source closing:", err);
+          throw err;
+        }
+      }
 }
 
 export default TypeORM

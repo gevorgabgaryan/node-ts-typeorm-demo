@@ -1,6 +1,6 @@
 
 import { DataSource } from "typeorm"
-import { Account, Currency } from "./entity"
+import { Account, Currency, Bank } from "./entity"
 import Config from '../config'
 
 export const appDataSource = new DataSource({
@@ -10,7 +10,7 @@ export const appDataSource = new DataSource({
     username: Config.mysql.userName,
     password: Config.mysql.password,
     database: Config.mysql.database,
-    entities: [Account, Currency],
+    entities: [Account, Currency, Bank],
     logging: false,
     synchronize: true,
 })
