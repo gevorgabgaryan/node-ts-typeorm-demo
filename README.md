@@ -51,20 +51,19 @@ Make sure you have the following installed on your machine:
     Adjust the values according to your specific setup.
 
 ## Usage
+  1.  Build and start the application
+      -  docker-compose up --build
 
-    Build and start the application
-        docker-compose up --build
-
-    The application will be running on
-        http://localhost:4000
+  2. The application will be running on
+      -  http://localhost:4000
 
 ## API Documentation
 
 
-     API documentation is generated using Swagger UI.
+ 1.  API documentation is generated using Swagger UI.
      After starting the application,
      you can access the documentation at
-     http://localhost:4000/api-docs
+     - http://localhost:4000/api-docs
 
 ## Contact
    For any inquiries, please contact Gevorg
