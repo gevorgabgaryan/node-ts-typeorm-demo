@@ -1,3 +1,4 @@
+import 'reflect-metadata';
 import { Entity, Column, PrimaryGeneratedColumn, Index } from "typeorm";
 
 @Entity({name: "currencies"})

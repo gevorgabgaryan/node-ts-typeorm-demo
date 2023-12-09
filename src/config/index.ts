@@ -6,9 +6,10 @@ const Config = {
    port: process.env.PORT || 3115,
    mysql: {
     port: process.env.MYSQL_DB_PORT ? parseInt(process.env.MYSQL_DB_PORT, 10) : 3306,
-    userName: process.env.MYSQL_USERNAME,
-    password: process.env.MYSQL_PASSWORD,
-    database: process.env.MYSQL_DB_NAME
+    userName: process.env.MYSQL_USERNAME || 'root',
+    password: process.env.MYSQL_PASSWORD || '',
+    database: process.env.MYSQL_DB_NAME || 'DATA',
+    host: process.env.MYSQL_HOST || 'localhost'
    }
 }
 

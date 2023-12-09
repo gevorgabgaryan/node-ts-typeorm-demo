@@ -1,3 +1,4 @@
+import 'reflect-metadata';
 import { AutoMap } from "@nartc/automapper";
 import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, JoinColumn } from "typeorm";
 import { Currency } from "./Currency";

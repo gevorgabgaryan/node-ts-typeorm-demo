@@ -1,22 +1,27 @@
-import 'reflect-metadata';
 import { Body, Get, JsonController, Post } from 'routing-controllers';
 import { Service } from 'typedi';
-import { AddAccountDto } from '../dto/account/addAccount.dto';
 import { AccountService } from '../services/AccountService';
+import { OpenAPI, ResponseSchema } from 'routing-controllers-openapi';
+import { AccountResponseDto } from '../dtos/account';
+import { PostAccountSchema } from '../schemas/account';
 
 @Service()
 @JsonController('/accounts')
 export class AccountController {
-  constructor(private accountService: AccountService) {
-
-  }
+  constructor(private accountService: AccountService) {}
   @Get('/')
+  @OpenAPI({ summary: 'Get all accounts', tags: ['Account'] })
   getAll() {
-    return 'Account';
+    return this.accountService.getAll();
   }
-
   @Post('/add')
-  async addAccount(@Body() account: AddAccountDto) {
-      return await this.accountService.addAccount(account);
+  @OpenAPI({
+    summary: 'Add new account',
+    tags: ['Account'],
+    description: 'Endpoint to add a new account with the provided details.',
+  })
+  @ResponseSchema(AccountResponseDto)
+  async addAccount(@Body() account: PostAccountSchema): Promise<AccountResponseDto> {
+    return await this.accountService.addAccount(account);
   }
 }

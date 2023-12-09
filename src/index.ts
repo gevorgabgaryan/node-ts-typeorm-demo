@@ -9,6 +9,16 @@ import logger from './shared/logger';
     await App.init();
   } catch (err) {
     logger.error('Initializing error', err)
-    process.exit(1)
   }
 })();
+
+process.on('unhandledRejection', (err) => {
+  logger.error('unhandledRejection')
+  logger.error(err)
+  throw err
+})
+
+process.on('uncaughtException', (err) => {
+  logger.error('uncaughtException')
+  logger.error(err)
+})
