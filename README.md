@@ -26,7 +26,7 @@ Make sure you have the following installed on your machine:
 
 1. Clone the repository:
 
-    - git clone https://github.com/gevorgabgaryan/node-ts-typeorm-demo.git`
+    - git clone https://github.com/gevorgabgaryan/node-ts-typeorm-demo.git
     - cd node-ts-typeorm-demo
 
 ## Configuration
