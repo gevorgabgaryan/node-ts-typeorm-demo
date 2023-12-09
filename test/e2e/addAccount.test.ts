@@ -2,9 +2,10 @@ import TypeORM from '../../src/typeorm';
 import App from '../../src/app';
 import request from 'supertest';
 import { Server } from 'http';
-import { PostAccountSchema } from '../../src/request-schemas/account/PostAccountSchema';
 import { appDataSource } from '../../src/typeorm/app-data-source';
 import logger from '../../src/shared/logger';
+import { PostAccountSchema } from '../../src/schemas/account';
+
 
 let server: Server;
 const testBank = 'TestBank';
