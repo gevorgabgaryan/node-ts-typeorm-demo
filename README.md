@@ -26,14 +26,14 @@ Make sure you have the following installed on your machine:
 
 1. Clone the repository:
 
-    `**git clone https://github.com/gevorgabgaryan/node-ts-typeorm-demo.git**`
-    `**cd node-ts-typeorm-demo**`
+    `git clone https://github.com/gevorgabgaryan/node-ts-typeorm-demo.git`
+    `cd node-ts-typeorm-demo`
 
 ## Configuration
 
  1. Create a .env file based on the provided env-sample file:
 
-    `**cp .env-sample .env**`
+    `cp .env-sample .env`
 
  2. Open the .env file in a text editor and fill
    in the required configuration values,
@@ -53,16 +53,16 @@ Make sure you have the following installed on your machine:
 ## Usage
 
    1.  Build and start the application:
-    `**docker-compose up --build**`
+    `docker-compose up --build`
     2.  The application will be running on
-    `**http://localhost:4000.**`
+    `http://localhost:4000.`
 
 ## API Documentation
 
    1. API documentation is generated using Swagger UI.
    2. After starting the application,
      you can access the documentation at
-     `**http://localhost:4000/api-docs**`.
+     `http://localhost:4000/api-docs`.
 
 ## Contact
    For any inquiries, please contact Gevorg
