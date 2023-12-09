@@ -26,41 +26,38 @@ Make sure you have the following installed on your machine:
 
 1. Clone the repository:
 
-   ```bash
-   git clone https://github.com/gevorgabgaryan/node-ts-typeorm-demo.git
-   cd node-ts-typeorm-demo
+    **git clone https://github.com/gevorgabgaryan/node-ts-typeorm-demo.git**
+    **cd node-ts-typeorm-demo**
 
 ## Configuration
 
-1. Create a .env file based on the provided env-sample file:
+    1. Create a .env file based on the provided env-sample file:
 
-cp env-sample .env
+    **cp .env-sample .env**
 
-2. Open the .env file in a text editor and fill in the required configuration values, such as database connection details:
+    2. Open the .env file in a text editor and fill in the required configuration values, such as database connection details:
 
-env
+    NODE_ENV=development
+    PORT=4000
+    MYSQL_DB_PORT=3306
+    MYSQL_DB_EXPOSE_PORT=3306
+    MYSQL_USERNAME=root
+    MYSQL_PASSWORD=root
+    MYSQL_DB_NAME=mydatabase
+    MYSQL_HOST=db
 
-NODE_ENV=development
-PORT=4000
-MYSQL_DB_PORT=3306
-MYSQL_DB_EXPOSE_PORT=3306
-MYSQL_USERNAME=root
-MYSQL_PASSWORD=root
-MYSQL_DB_NAME=mydatabase
-MYSQL_HOST=db
-
-Adjust the values according to your specific setup.
+    Adjust the values according to your specific setup.
 
 ## Usage
 
-Build and start the application:
-docker-compose up --build
-The application will be running on http://localhost:4000.
+    Build and start the application:
+    **docker-compose up --build**
+    The application will be running on **http://localhost:4000.**
 
 ## API Documentation
 
-API documentation is generated using Swagger UI. After starting the application, you can access the documentation at http://localhost:4000/api-docs.
+    API documentation is generated using Swagger UI. After starting the application, you can access the documentation at **http://localhost:4000/api-docs**.
 
 ## Contact
 
-For any inquiries, please contact Gevorg at gevorg.gak@gmail.com.
+  For any inquiries, please contact Gevorg at gevorg.gak@gmail.com.
